@@ -1,0 +1,7 @@
+    for score in scores:
+        if score <= p1:
+            new_scores.append( rescale(score, orig_min=0, orig_max=p1, new_min=0.0, new_max=0.499) )
+        elif score >= p2:
+            new_scores.append( rescale(score, orig_min=p2, orig_max=1, new_min=0.501, new_max=1.0) )
+        else:
+            new_scores.append(0.5)
