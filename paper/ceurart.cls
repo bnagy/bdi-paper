@@ -389,7 +389,7 @@
       % pdfauthor={\csuse{__short_authors:}},
       % pdfauthor={\csuse{__authors:}},
       % pdftitle={\@title},
-      pdfsubject={CEUR~Workshop~Proceedings~(CEUR-WS.org)},
+      % pdfsubject={CEUR~Workshop~Proceedings~(CEUR-WS.org)},
       pdfkeywords={\pdfxkeywords},
       linkcolor={hscolor},
       urlcolor={hscolor},
