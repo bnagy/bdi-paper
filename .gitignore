@@ -9,6 +9,7 @@ __pycache__
 *.alg
 *.aux
 *.bbl
+*.bcf
 *.blg
 *.dvi
 *.fdb_latexmk
@@ -30,6 +31,7 @@ __pycache__
 *.out
 *.pdfsync
 *.ps
+*.run.xml
 *.snm
 *.synctex.gz
 *.toc

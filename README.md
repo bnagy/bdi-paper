@@ -1,41 +1,15 @@
-# fail-paper [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) 
+# bdi-paper [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) 
 
-LaTeX and figures for the preprint '(Not) Understanding Latin Poetic Style with
-Deep Learning'.
+LaTeX and figures for the paper **Bootstrap Distance Imposters: High precision authorship verification with improved interpretability**
 
-![poster summarizing the project](fail-poster.jpg?raw=true "The Poster")
+The compiled [paper](paper/main.pdf) is also included.
 
-The compiled [preprint](paper/fail.pdf) is also included.
-
-Further information will be added if the paper is ever submitted (and accepted)
-for publication. Right now it's kind of not working :/
-
-*WARNING* This is a preprint, which has not been peer reviewed. Any final paper
-will almost certainly include changes, which can sometimes be quite substantial.
-The results listed are also subject to change. 
-
-LaTeX 'ceur' style modified from the CEUR Workshop [template](paper/ceurart.cls)
-(see copyrights etc)
+This paper will be presented at CHR 2024, Aarhus, Denmark. It is published in [the full proceedings](https://ceur-ws.org/Vol-3834/) [here](https://ceur-ws.org/Vol-3834/paper61.pdf).
 
 ## ABSTRACT
 
-This article summarizes some mostly unsuccessful attempts to understand
-authorial style by examining the attention of various neural networks (LSTMs and
-CNNs) trained on a corpus of classical Latin verse that has been encoded to
-include sonic and metrical features. Carefully configured neural networks are
-shown to be extremely strong authorship classifiers, so it is hoped that they
-might therefore teach 'traditional' readers something about how the authors
-differ in style. Sadly their reasoning is, so far, inscrutable. While the
-overall goal has not yet been reached, this work reports some useful findings in
-terms of effective ways to encode and embed verse, the relative strengths and
-weaknesses of the neural network families, and useful (and not so useful)
-techniques for designing and inspecting NN models in this domain. This article
-suggests that, for poetry, CNNs are better choices than LSTMs---they train more
-quickly, have equivalent accuracy, and (potentially) offer better
-interpretability. Based on a great deal of experimentation, it also suggests
-that simple, trainable embeddings are more effective than domain-specific
-schemes, and stresses the importance of techniques to reduce overfitting, like
-dropout and batch normalization.
+
+This paper describes an update to the open-source Python implementation of the General Imposters method of authorship verification by Mike Kestemont et al. The new algorithm, called Bootstrap Distance Imposters (henceforth BDI), incorporates a key improvement introduced by Potha and Stamatatos, as well as introducing a novel method of bootstrapping that has several attractive properties when compared to the reference algorithm. I supply an open-source implementation, as well as an updated version of the Kestemont et al. code (for Python 3.x) which incorporates the same basic improvements. Next, the two approaches are benchmarked using the problems from the multi-lingual PAN 2014 author identification task, as well as the more recent PAN 2021 task. Additionally, the interpretability advantages of BDI are showcased via real-world verification studies. When operating as a summary verifier, BDI tends to be more conservative in its positive attributions, particularly when applied to difficult problem sets like the PAN2014 en_novels. In terms of raw performance, the BDI verifier outperforms all PAN2014 entrants and appears slightly stronger than the improved Kestemont GI according to the PAN metrics for both the 2014 and 2021 problems, while also offering superior interpretability.
 
 ## Citation
 
@@ -43,17 +17,28 @@ If you are also playing the Fun Academia Game, please help me refill my Academia
 Hearts.
 
 ```
-@article{nagy_fail_2022,
+@inproceedings{nagy_bdi,
+    title           = "Bootstrap {D}istance {I}mposters: High precision authorship verification with improved interpretability",
     author          = "Nagy, Ben",
-    title           = "(Preprint) (Not) Understanding {L}atin Poetic Style with Deep Learning",
-    year            = "2022",
-    publisher       = {Zenodo},
-    version         = {v1.0.0},
-    doi             = {TBD},
-    howpublished    = "\url{https://github.com/bnagy/fail-paper}"
+    pages           = "482--493",
+    url             = {https://ceur-ws.org/Vol-3834/paper61.pdf},
+    crossref        = {CHR2024},
+}
+@proceedings{CHR2024,
+  booktitle = {Proceedings of the Computational Humanities Research Conference 2024},
+  year = 2024,
+  editor = {Wouter Haverals and Marijn Koolen and Laure Thompson}
+  number = 3834,
+  series = {{CEUR} Workshop Proceedings},
+  address = {Aachen},
+  issn = {1613-0073},
+  url = {http://ceur-ws.org/Vol-3834,
+  venue = {Aarhus, Denmark},
+  eventdate = {2024-12-03},
 }
 ```
 
+(I am not 1000% sure if this is correct, I am copying their bibtex template)
 ## LICENSE
 
 CC-BY 4.0 (see LICENSE.txt)
