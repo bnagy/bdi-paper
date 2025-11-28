@@ -7,6 +7,8 @@ The compiled [paper](paper/main.pdf) is also included.
 
 This paper was presented at CHR 2024, Aarhus, Denmark. It is published in [the full proceedings](https://ceur-ws.org/Vol-3834/) [here](https://ceur-ws.org/Vol-3834/paper61.pdf).
 
+For the code, see [this repo](https://github.com/bnagy/ruzicka), which also has a [Quickstart](https://github.com/bnagy/ruzicka/blob/main/code/QuickstartBDI.ipynb).
+
 ## ABSTRACT
 
 
